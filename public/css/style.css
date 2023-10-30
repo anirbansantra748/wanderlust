@@ -1,0 +1,181 @@
+/* Body */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #e15b39;
+    color: white;
+    padding: 0.5rem 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    color: white !important;
+    margin: 0 10px;
+    transition: color 0.3s;
+    font-weight: 400;
+}
+
+.nav-link:hover {
+    color: #f58220 !important; /* Change color on hover */
+}
+
+/* Footer */
+footer {
+    background-color: #e22e01;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-weight: 400;
+}
+
+.f-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.f-info a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    font-weight: 400;
+}
+
+.f-info a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.listing-card {
+    margin: 1rem;
+    flex: 0 0 calc(33.3333% - 2rem);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.listing-card:hover {
+    transform: scale(1.05);
+}
+
+.card-img-top {
+    border-radius: 1rem 1rem 0 0;
+    width: 100%;
+    object-fit: cover;
+    height: 15rem;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-text p {
+    font-weight: 400;
+}
+
+.card-link {
+    text-decoration: none;
+}
+
+/* Hover Effect */
+.listing-card:hover .card-img-overlay {
+    opacity: 0.5;
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: opacity 0.2s;
+}
+
+
+/* Button */
+.show-img {
+    width: 80%;
+    height: 40%;
+    margin: 5px;
+    border-radius: 1rem;
+    font-weight: 600;
+}
+
+.delete {
+    margin-left: 1rem;
+    font-weight: 600;
+}
+
+#map {
+    margin-left: 28%;
+    margin-bottom: 2rem;
+    height: 300px;
+    width: 50%;
+    border-radius: 1rem;
+}
+
+/* Footer Sticking to Bottom */
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+
+
+/* Reviews */
+.review {
+    background-color: #f5f5dc;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    margin: 2rem 0;
+}
+
+.starability-slot {
+    margin-top: 1rem;
+}
+
+.starability-facet {
+    margin: 5px;
+    font-size: 16px; /* Make the stars a bit larger */
+}
+
+.starability-facet:hover {
+    color: #f58220;
+}
+
+.review-textarea {
+    margin-top: 1rem;
+}
+
+/* Delete Button */
+.delete-review-btn {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: #e15b39; /* Change to the theme color */
+}
+
+#body{
+    background-color: #f5f5f5;
+}

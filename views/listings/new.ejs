@@ -1,0 +1,92 @@
+<% layout("/layouts/boilerplate") %>
+<body>
+  <div class="row mt-2">
+    <div class="col-7 offset-2">
+      <h3>Create a New Listing</h3>
+
+      <form method="POST" action="/listings" class="was-validated" enctype="multipart/form-data">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title-</label>
+          <input
+            type="text"
+            name="listing[title]"
+            placeholder="enter title"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Title looks good</div>  
+          <div class="invalid-feedback">Add a title</div>  
+        </div>
+
+        <div class="mb-3">
+          <label for="description" class="form-label">Description-</label>
+          <textarea
+            name="listing[description]"
+            id="desc"
+            cols="40"
+            rows="2"
+            class="form-control"
+            required
+          ></textarea>
+          <div class="valid-feedback">description looks good</div>  
+          <div class="invalid-feedback">Fill the description</div>  
+        </div>
+
+        <div class="row">
+          <div class="mb-3 col-md-4">
+            <label for="price" class="form-label">Price-</label>
+            <input
+              name="listing[price]"
+              placeholder="enter price"
+              class="form-control"
+              required
+            />
+            <div class="valid-feedback">price looks good</div>  
+          <div class="invalid-feedback">invalid price pleace recheck!</div>  
+          </div>
+
+          <div class="mb-3 col-md-8">
+            <label for="country" class="form-label">Country-</label>
+            <input
+              type="text"
+              name="listing[country]"
+              placeholder="enter your country"
+              class="form-control"
+              required
+            />
+            <div class="valid-feedback">Look's good</div>  
+          <div class="invalid-feedback">write your country!</div>  
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="location" class="form-label">Location-</label>
+          <input
+            type="text"
+            name="listing[location]"
+            placeholder="enter your location"
+            class="form-control"
+            required
+          />
+          <div class="valid-feedback">Look's good</div>  
+          <div class="invalid-feedback">write a valid location!</div>  
+        </div>
+
+        <div class="mb-3">
+          <label for="URL" class="form-label">URL-</label>
+          <input
+            type="file"
+            name="listing[image]"
+            class="form-control"
+            required
+          />
+        </div>
+
+        <button type="submit" class="btn btn-primary custom-button">Submit</button>
+        <br><br>
+      </form>
+    </div>
+  </div>
+</body>
+
+

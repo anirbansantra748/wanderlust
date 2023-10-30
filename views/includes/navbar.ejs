@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wanderlust</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/listings"><i class="fa-solid fa-square-h logo" style="color: aliceblue;"></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="/listings">Explore&nbsp;<i class="fa-brands fa-wpexplorer" style="font-size: large;"></i></a>
+            </div>
+
+            <form class="d-flex" role="search">
+              <div class="input-group"> <!-- Wrap input and button in an input group -->
+                  <input class="form-control rounded-pill me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-dark rounded-pill" type="submit">
+                      <i class="fas fa-search"></i> <!-- Add a search icon using Font Awesome -->
+                  </button>
+              </div>
+          </form>
+          
+          <div style="margin-left: 15%; text-align: center; font-family: 'Pacifico', cursive; font-size: 24px; color: #ffffff;"><h1>WONDERLUST</h1></div>
+            
+            <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="/listings/new"><i class="fa-regular fa-square-plus"></i>&nbsp; Add New listing</a>
+              <% if(!currUser){ %>
+              <a class="nav-link" href="/signup"><b>Sign Up</b></a>
+              <a class="nav-link" href="/login"><b>Log in</b></a>
+              <% } %>
+              <% if(currUser){ %>
+              <a class="nav-link" href="/logout"><b>Log out</b>&nbsp;<i class="fa-solid fa-right-from-bracket"></i></a>
+              <% } %>
+            </div>
+          </div>
+        </div>
+      </nav>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<% layout("/layouts/boilerplate") %>
+<body id="body">
+  <style>
+    #filters {
+      display: flex;
+    }
+    .filter {
+      text-align: center;
+      margin-right: 2rem;
+      margin-top: 2rem;
+      opacity: 0.7;
+    }
+    .filter:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+    .gst{
+        display: none;
+    }
+    
+  </style>
+
+  <div id="filters">
+    <div class="filter">
+      <div><i class="fa-solid fa-fire"></i></div>
+      <p>Triending</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-bed"></i></div>
+      <p>Rooms</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-building-wheat"></i></div>
+      <p>Iconic citys</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-umbrella-beach"></i></div>
+      <p>Beach</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-person-swimming"></i></div>
+      <p>Amazing pools</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-brands fa-fort-awesome"></i></div>
+      <p>Castels</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-tree"></i></div>
+      <p>Tropicals</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-mountain"></i></div>
+      <p>Mountains</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-tractor"></i></div>
+      <p>Farms</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-person-snowboarding"></i></div>
+      <p>snow</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-ship"></i></div>
+      <p>ship</p>
+    </div>
+    <div class="filter">
+      <div><i class="fa-solid fa-fish"></i></div>
+      <p>Sea</p>
+    </div>
+    <div class="tax_switch">
+      <div class="form-check-reverse form-switch">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckDefault"
+        />
+        <div class="mt-4"><label class="form-check-label" for="flexSwitchCheckDefault"
+          >Display after taxes</label></div>
+      </div>
+    </div>
+  </div>
+  <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1 mt-3">
+    <% for (listing of allListings) { %>
+    <a href="listings/<%= listing._id %>" class="card-link">
+      <div class="card col listing-card" style="width: 25rem">
+        <img src="<%= listing.image.url %>" class="card-img-top" alt="image" />
+        <div class="card-img-overlay"></div>
+        <div class="card-body">
+          <p class="card-title"><b><%= listing.title %></b></p>
+          <% if (listing.price !== null && listing.price !== undefined) { %>
+          <p class="card-price">
+            &#8377;<%= listing.price.toLocaleString("en-IN") %>/Night
+          </p>
+          <i class="gst"><b>+18% G.S.T</b></i>
+          <% } else { %>
+          <p class="card-price">Price not available</p>
+          <% } %>
+        </div>
+      </div>
+    </a>
+    <% } %>
+  </div>
+
+
+  <!-- <form method="GET" action="/listings/new">
+        <button type="submit">create</button>
+    </form> -->
+    <!-- <script>
+        let switchElement = document.getElementById("flexSwitchCheckDefault");
+        switchElement.addEventListener("click",()=>{
+            let gstswitch = document.getElementsByClassName("gst");
+            for(switch of gstswitch){
+
+            }
+        });
+
+      </script> -->
+      
+</body>
